@@ -8,7 +8,7 @@
     /* primary */
     --pale-blue: hsl(225, 100%, 94%);
     --Bright-blue: hsl(245, 75%, 52%);
-
+  
     /* Neutral */
     --Desaturated-blue: hsl(224, 23%, 55%);
     --Dark-blue: hsl(223, 47%, 23%);
@@ -46,18 +46,9 @@
 body{
     font-family: var(--red-hat-display);
 } 
-main{
-    position: absolute;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
 main > .wrapper{
     height: 100vh;
     display: flex;
-    margin: 0 20px;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -97,7 +88,6 @@ h1{
     gap: 10px;
     margin: 25px;
     border-radius: 20px;
-    justify-content: space-between;
     background-color: var(--Very-pale-blue);
 }
 .left{
@@ -106,13 +96,13 @@ h1{
 }
 
 .plan-container .plan{
-    gap: 10px;
+    gap: 5px;
     display: flex;
     flex-direction: column;
 }
 
 .plan-container > .change{
-
+margin-left: auto;
 }
 .change:hover{
     cursor: pointer;
@@ -124,6 +114,7 @@ h1{
     font-weight: 700;
     background-color: var(--Bright-blue);
     color: white;
+
     border-radius: 10px;
     box-shadow: 2px 15px 15px  var(--pale-blue);
 
@@ -131,7 +122,8 @@ h1{
 .btn:hover{
     cursor: pointer;
     font-weight: 700;
-    background-color: var(--Desaturated-blue);
+    /* background-color: var(--Desaturated-blue); */
+    background-color:   #766cf1;
 }
 .cancel{
     margin: 30px 0;
@@ -149,19 +141,29 @@ h1{
 
 /* media queries */
 @media (min-width:375px){
-    body{
+    .wrapper{
         background:var(--background-pattern-mobile) ;
         background-repeat: no-repeat;
-        background-size: cover;
+        background-size: contain;
         background-color: var(--pale-blue);
     }
     }
+@media (min-width:768px){
+    .wrapper{
+        background:var(--background-pattern-mobile) ;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-color: var(--pale-blue);
+    }
+    }
+
     
 @media (min-width:1440px){
-    body{
+    .wrapper{
+        background-color: var(--pale-blue);
         background:var(--background-pattern) ;
         background-repeat: no-repeat;
-        background-size: cover;
+        background-size: contain;
         background-color: var(--pale-blue);
     }
     }
